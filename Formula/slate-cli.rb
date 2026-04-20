@@ -1,25 +1,25 @@
 class SlateCli < Formula
   desc "Cross-platform terminal beautification kit for macOS and Linux"
   homepage "https://github.com/MoonMao42/slate"
-  version "0.1.2"
+  version "0.2.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/MoonMao42/slate/releases/download/v0.1.2/slate-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "ef8b72ee3ebfb9f03523ca6e3d93673c98095326a9d3efdc715c30e9dbd6f8ed"
+      url "https://github.com/MoonMao42/slate/releases/download/v0.2.0/slate-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "ed7c644c8f52ebe41b39772080ad69fabfb5836c9bb5a7afcaf70858710667f1"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/MoonMao42/slate/releases/download/v0.1.2/slate-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "cd59f721e30c1e7ea66cec272c662490d1f63a9093b08c525599afb13e8fdf67"
+      url "https://github.com/MoonMao42/slate/releases/download/v0.2.0/slate-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "8a489a684aeea5cd80098b147613b56ba5657d95b58032581b17b71e774b4a5d"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/MoonMao42/slate/releases/download/v0.1.2/slate-cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "d9decde0e74770d71493cdf40b686e899c6b1c8f4ed2d7f536edf25b194ec0ee"
+      url "https://github.com/MoonMao42/slate/releases/download/v0.2.0/slate-cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "a38789f728703a8b0d19e3b12aee087ae5001b102332a2955b0e43e7614925fa"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/MoonMao42/slate/releases/download/v0.1.2/slate-cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "d2d02ddea2bafdbf19a9db33913a49a79098fb2031cfd989ea09e993aec96825"
+      url "https://github.com/MoonMao42/slate/releases/download/v0.2.0/slate-cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "4fc44fcce7d7570afb5d6eec3b5651a44e951254a87175589e64c742b2788057"
     end
   end
   license "MIT"
