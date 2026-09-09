@@ -1,25 +1,25 @@
 class SlateCli < Formula
   desc "Cross-platform terminal beautification kit for macOS and Linux"
   homepage "https://github.com/MoonMao42/slate"
-  version "0.4.0"
+  version "0.5.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/MoonMao42/slate/releases/download/v0.4.0/slate-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "cedf8aafb1c976deec03d4e1912f13d209146c61b12e09edf835d7a36b0b0939"
+      url "https://github.com/MoonMao42/slate/releases/download/v0.5.0/slate-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "b4af91215c9a1551507e51930dc453fdf0aa42ccd5bb2e9289e61889589c278e"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/MoonMao42/slate/releases/download/v0.4.0/slate-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "b35ff8d1bab0c701daea7ba04aa3ba7471d08946e86b6577217072d64bc4b8ea"
+      url "https://github.com/MoonMao42/slate/releases/download/v0.5.0/slate-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "9320d7496dd6cb40d0ad24777cb7f5470f75bb157c85d10a9426353a060ad232"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/MoonMao42/slate/releases/download/v0.4.0/slate-cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "a1feff537e8ccd536399eecb78b293b16e25840fe986757887a2123f3968762a"
+      url "https://github.com/MoonMao42/slate/releases/download/v0.5.0/slate-cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "868f428580a5fd81b96504a8b71916e9f689811b4a70321b930bbc0a223cab71"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/MoonMao42/slate/releases/download/v0.4.0/slate-cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "72a809fe7831910f3f3814e3a9020993e9bd05fdc627646d7fb52475c8947599"
+      url "https://github.com/MoonMao42/slate/releases/download/v0.5.0/slate-cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "fac8e84070666e9ba01cfcf6fb732519434d064c497d35f73c30464b9a72a86e"
     end
   end
   license "MIT"
@@ -47,10 +47,18 @@ class SlateCli < Formula
   end
 
   def install
-    bin.install "slate" if OS.mac? && Hardware::CPU.arm?
-    bin.install "slate" if OS.mac? && Hardware::CPU.intel?
-    bin.install "slate" if OS.linux? && Hardware::CPU.arm?
-    bin.install "slate" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "slate"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "slate"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "slate"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "slate"
+    end
 
     install_binary_aliases!
 
